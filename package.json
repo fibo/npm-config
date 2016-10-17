@@ -1,0 +1,31 @@
+{
+  "name": "fibos-npm-config",
+  "version": "0.0.0",
+  "private": true,
+  "description": "fibo's npm init defaults",
+  "main": "package.json",
+  "scripts": {
+    "init_config": "for x in author license version; do npm run ${init}.${x}; done",
+    "init.author": "for x in name url; do npm run ${init}.author.${x}; done",
+    "init.author.name": "npm config set init.author.name \"Gianluca Casati\"",
+    "init.author.url": "npm config set init.author.url http://g14n.info",
+    "init.license": "npm config set init.license MIT",
+    "init.version": "npm config set init.version 0.0.0",
+    "postinstall": "npm run init_config",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fibo/npm-config.git"
+  },
+  "keywords": ["npm", "config"],
+  "author": {
+    "name": "Gianluca Casati",
+    "url": "http://g14n.info"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fibo/npm-config/issues"
+  },
+  "homepage": "https://github.com/fibo/npm-config#readme"
+}
