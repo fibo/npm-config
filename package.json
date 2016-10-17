@@ -5,8 +5,8 @@
   "description": "fibo's npm init defaults",
   "main": "package.json",
   "scripts": {
-    "init_config": "for x in author license version; do npm run ${init}.${x}; done",
-    "init.author": "for x in name url; do npm run ${init}.author.${x}; done",
+    "init_config": "for x in author license version; do npm run init.${x}; done",
+    "init.author": "for x in name url; do npm run init.author.${x}; done",
     "init.author.name": "npm config set init.author.name \"Gianluca Casati\"",
     "init.author.url": "npm config set init.author.url http://g14n.info",
     "init.license": "npm config set init.license MIT",
